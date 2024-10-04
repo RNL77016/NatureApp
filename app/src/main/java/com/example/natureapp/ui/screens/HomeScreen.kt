@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import com.example.natureapp.ui.components.CardImage
+import com.example.natureapp.ui.theme.NatureAppTheme
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.MaterialTheme
@@ -12,8 +14,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.natureapp.ui.components.CardImage
-import com.example.natureapp.ui.theme.NatureAppTheme
 
 @Composable
 fun HomeScreen(innerPadding: PaddingValues){
@@ -29,16 +29,16 @@ fun HomeScreen(innerPadding: PaddingValues){
         "Grutas de Tolantongo, Hidalgo",
         "Gran Cenote, Tulum",
         "Cañon del Sumidero, Chiapas",
-        "Cuatrocienegas, Coahuila",
+        "Cuatro Cienegas, Coahuila",
         "Arrecife Veracruzano, Veracruz"
     )
 
     val descriptions = listOf(
-        "Aguas termales y grutas en un entorno montañoso.",
-        "Sistema subterráneo de agua cristalina rodeado de vegetación.",
-        "Impresionante desfiladero fluvial con acantilados altos.",
-        "Oasis en medio del desierto con una biodiversidad única.",
-        "Ecosistema marino que protege una gran variedad de especies de coral y vida marina en las aguas del Golfo de México."
+        "Aguas termales, grutas y cascadas en un entorno montañoso rodeado de vegetación exuberante.",
+        "Sistema subterráneo de agua cristalina rodeado de vegetación selvática y fauna acuática.",
+        "Impresionante desfiladero fluvial con acantilados altos, fauna silvestre y un río caudaloso.",
+        "Oasis en medio del desierto, con una biodiversidad única, aguas minerales y especies endémicas.",
+        "Ecosistema marino que protege una gran variedad de especies de coral y vida marina."
     )
 
     Box (

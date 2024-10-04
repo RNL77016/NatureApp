@@ -1,28 +1,25 @@
 package com.example.natureapp.ui.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
+import coil.compose.AsyncImage
+import coil.request.ImageRequest
+import com.example.natureapp.R
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.AsyncImage
-import coil.request.ImageRequest
-import com.example.natureapp.R
 
 @Composable
 fun CardImage(image : String, title : String, description : String){
@@ -31,9 +28,9 @@ fun CardImage(image : String, title : String, description : String){
             .fillMaxWidth()
             .padding(vertical = 10.dp)
     ){
-        AsyncImage(
+        AsyncImage (
             model = ImageRequest.Builder(LocalContext.current)
-                .placeholder(R.drawable.grutas)
+                .placeholder(R.drawable.tulum)
                 .data(image)
                 .build(),
             contentDescription = "CardImage",
@@ -43,26 +40,26 @@ fun CardImage(image : String, title : String, description : String){
             contentScale = ContentScale.Crop
         )
 
-        Box(
+        Box (
             modifier = Modifier
                 .fillMaxWidth()
-                .height(110.dp)
-        ){
-            Column(
+                .height(95.dp)
+        ) {
+            Column (
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(10.dp)
-            ){
-                Text(
+            ) {
+                Text (
                     text = title,
-                    color = MaterialTheme.colorScheme.contentColorFor(MaterialTheme.colorScheme.background), // Use contentColorFor
-                    fontSize = 16.sp,
+                    color = MaterialTheme.colorScheme.contentColorFor(MaterialTheme.colorScheme.background),
+                    fontSize = 18.sp,
                     fontWeight = FontWeight.Bold
                 )
-                Text(
+                Text (
                     text = description,
-                    color = MaterialTheme.colorScheme.contentColorFor(MaterialTheme.colorScheme.background), // Use contentColorFor
-                    fontSize = 14.sp
+                    color = MaterialTheme.colorScheme.contentColorFor(MaterialTheme.colorScheme.background),
+                    fontSize = 16.sp
                 )
             }
         }
@@ -72,5 +69,7 @@ fun CardImage(image : String, title : String, description : String){
 @Preview
 @Composable
 fun CardImagePreview(){
-    CardImage(image = "https://www.dgcs.unam.mx/boletin/bdboletin/multimedia/WAV211218/1101(2).jpg", title = "Arrecife Veracruzano, Veracruz", description = "Ecosistema marino que protege una gran variedad de especies de coral y vida marina en las aguas del Golfo de México.")
+    CardImage(image = "https://akebia.progettidemo.com/wp-content/uploads/2017/07/what-to-do-in-tulum-mexico_h.jpg",
+        title = "Tulum, Quintana Roo",
+        description = "Este es un ejemplo de como se verá la descripcion, pero Tulum es una playa muy bonita")
 }
